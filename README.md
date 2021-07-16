@@ -2,7 +2,13 @@
 
 Une application permettant de diviser un fichier PDF en autant de fichiers PDF indépendants qu'il y a de pages dans le fichier PDF d'origine.
 
-## Crédits
+## Installation
+
+## Dossier uploads
+
+```
+./backend/api/public/uploads
+```
 
 ### PDFTK
 
