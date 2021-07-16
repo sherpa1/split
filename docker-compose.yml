@@ -1,0 +1,22 @@
+version: "3.9"
+
+networks:
+  split.app:
+    driver: bridge
+
+services:
+  split_api:
+    container_name: split_api
+    image: node
+    ports:
+      - "3010:3000"
+    volumes:
+      - ./backend/api:/app/api
+    working_dir: /app/api
+    env_file:
+      - ./backend/api/.env
+    command: npm run dev #for npm modules installation inside container and hot reloading in dev environment
+    #command: bash -c 'npm i && npm start' #for npm modules installation inside container without hot reloading in dev environment
+    #command: npm start #for production environment
+    networks:
+      - split.app

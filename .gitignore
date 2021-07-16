@@ -2,3 +2,6 @@
 api/.env
 api/node_modules
 web/node_modules
+api/public/uploads
+api/public/splits
+api/public/archive.zip
